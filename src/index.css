@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  .font-sans {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Frosted Neumorphism UI Texture (Soft-Glass Hybrid) */
+  .frosted-neu {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.04), -10px -10px 30px rgba(255, 255, 255, 0.95);
+  }
+
+  .frosted-neu-sm {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.035), -6px -6px 18px rgba(255, 255, 255, 0.9);
+  }
+
+  .frosted-neu-inset {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.04), inset -2px -2px 8px rgba(255, 255, 255, 0.9);
+  }
+
+  .frosted-neu-banner {
+    background: rgba(230, 244, 237, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 12px 12px 32px rgba(0, 140, 73, 0.08), -10px -10px 30px rgba(255, 255, 255, 0.95);
+  }
+
+  .bg-mesh {
+    background-image: radial-gradient(rgba(0, 140, 73, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .green-glow {
+    box-shadow: 0 0 30px rgba(0, 140, 73, 0.15);
+  }
+
+  /* Brand Green Gradient Text Effect */
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #00D65C 0%, #00A858 50%, #007A3E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shimmer Light Sweep Effect */
+  .shimmer-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-sweep::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
+    );
+    transform: translateX(-150%) skewX(-25deg);
+    animation: shimmerSweep 3.2s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  .shimmer-sweep-fast::after {
+    animation-duration: 2.2s;
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  45%, 100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008C49;
+}
+/* Combine flip clock digits into single boxes (Full Flip) */
+.flip-clock.full-flip {
+  --fcc-digit-block-spacing: 0px !important;
+  filter: drop-shadow(0 20px 25px rgb(0 0 0 / 0.05)) drop-shadow(0 8px 10px rgb(0 0 0 / 0.05));
+}
+
+/* Digits that have another digit after them lose their right corners */
+.flip-clock.full-flip .fcc__digit_block:has(+ .fcc__digit_block) {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* Digits that come after another digit lose their left corners */
+.flip-clock.full-flip .fcc__digit_block + .fcc__digit_block {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+/* Separate flip clock digits (Half Flip) */
+.flip-clock.half-flip {
+  --fcc-digit-block-spacing: 6px !important;
+  filter: drop-shadow(0 15px 20px rgb(0 0 0 / 0.04));
+}
+.flip-clock.half-flip .fcc__digit_block {
+  border-radius: 24px !important;
+}
+
+/* Custom 3D Card Flip Animation */
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.flip-animation-card {
+  animation: cardFlip 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+

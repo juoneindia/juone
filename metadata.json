@@ -1,0 +1,6 @@
+{
+  "name": "JUONE Super App",
+  "description": "Frosted Neumorphism Landing Page for JUONE Super App",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
