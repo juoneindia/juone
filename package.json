@@ -1,12 +1,12 @@
 {
-  "name": "react-example",
+  "name": "juone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "npm run build && wrangler dev",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "deploy": "npm run build && wrangler deploy"
@@ -32,6 +32,7 @@
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3"
+    "vite": "^6.2.3",
+    "wrangler": "^4.115.0"
   }
 }
