@@ -114,8 +114,8 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const FAQ_DATA: FAQItem[] = [
   {
     id: 'faq-1',
-    question: 'What is Ju Cart?',
-    answer: 'Ju Cart offers hyperlocal grocery and express food deliveries within 15 to 30 minutes. We partner with top local supermarkets, dark stores, and curated restaurants to bring fresh produce, daily essentials, and chef-crafted meals straight to your door.'
+    question: 'What is JUONE?',
+    answer: 'Juone is an all-in-one app designed to make your daily life easier. It brings together essential services like food delivery, rides, hotel bookings, home repairs, online shopping, and digital tools all into one single platform.'
   },
   {
     id: 'faq-2',
