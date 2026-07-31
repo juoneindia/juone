@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
             <li><a href="#faq" className="hover:text-[#008C49] transition-colors">Safety</a></li>
             <li>
               <a 
-                href="https://www.instagram.com/juone.india" 
+                href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-[#008C49] transition-colors"
@@ -83,51 +83,71 @@ export const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Right: Social Media Links */}
-        <div className="flex items-center gap-5 text-slate-600">
-          <a 
-            href="https://twitter.com/juone_india" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-[#008C49] transition-colors p-1" 
-            aria-label="Twitter / X"
-            title="JUONE on Twitter"
-          >
-            <Twitter size={18} />
-          </a>
-          <a 
-            href="https://www.instagram.com/juone.india" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-[#008C49] transition-colors p-1" 
-            aria-label="Instagram"
-            title="JUONE on Instagram"
-          >
-            <Instagram size={18} />
-          </a>
-          <a 
-            href="https://www.linkedin.com/company/juone" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-[#008C49] transition-colors p-1" 
-            aria-label="LinkedIn"
-            title="JUONE on LinkedIn"
-          >
-            <Linkedin size={18} />
-          </a>
-          <a 
-            href="https://www.facebook.com/juone.india" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-[#008C49] transition-colors p-1" 
-            aria-label="Facebook"
-            title="JUONE on Facebook"
-          >
-            <Facebook size={18} />
-          </a>
+        {/* Right: Developed By & Social Media Links */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-slate-600">
+          
+          {/* Developer Link */}
+          <span className="text-slate-500 font-sans font-normal whitespace-nowrap">
+            Developed by{' '}
+            <a 
+              href="https://virtechnologies.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-900 font-semibold hover:text-[#008C49] hover:underline transition-colors"
+              title="Visit Vir Technologies"
+            >
+              Vir Technologies
+            </a>
+          </span>
+
+          {/* Social Icons Sub-Container */}
+          <div className="flex items-center gap-4 text-slate-600">
+            <a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-[#008C49] transition-colors p-1" 
+              aria-label="Twitter / X"
+              title="JUONE on Twitter"
+            >
+              <Twitter size={18} />
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-[#008C49] transition-colors p-1" 
+              aria-label="Instagram"
+              title="JUONE on Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-[#008C49] transition-colors p-1" 
+              aria-label="LinkedIn"
+              title="JUONE on LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-[#008C49] transition-colors p-1" 
+              aria-label="Facebook"
+              title="JUONE on Facebook"
+            >
+              <Facebook size={18} />
+            </a>
+          </div>
+
         </div>
 
       </div>
     </footer>
   );
 };
+
