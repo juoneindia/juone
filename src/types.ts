@@ -1,3 +1,13 @@
+export interface CatalogItem {
+  id: string;
+  name: string;
+  category: 'Grocery' | 'Food' | 'Pharmacy' | 'Electronics' | 'Fashion' | 'Lifestyle' | string;
+  price: string;
+  originalPrice?: string;
+  image: string;
+  tag?: string;
+}
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -13,6 +23,7 @@ export interface ServiceItem {
     highlights: string[];
     availability: string;
   };
+  catalog?: CatalogItem[];
 }
 
 export interface FAQItem {
@@ -29,4 +40,3 @@ export interface CountdownState {
   seconds: number;
   isExpired: boolean;
 }
-
