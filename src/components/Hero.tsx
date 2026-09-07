@@ -1,10 +1,9 @@
 import React from 'react';
-import { ShoppingBag, Laptop, Code, MonitorSmartphone, Trophy, HandHeart, Sparkles } from 'lucide-react';
 import PremiumCountdown from './PremiumCountdown';
 
 export const Hero: React.FC = () => {
-  // Target date set to September 4th, 2026 (Do not display date string on UI)
-  const targetDate = new Date(2026, 8, 4, 0, 0, 0);
+  // Target date set to September 25th, 2026
+  const targetDate = new Date(2026, 8, 25, 0, 0, 0);
 
   return (
     <section id="home" className="pt-12 pb-20 px-4 text-center max-w-5xl mx-auto relative z-10">
@@ -23,17 +22,17 @@ export const Hero: React.FC = () => {
         </span>
       </h1>
 
-      {/* Countdown Timer (Sole Hero Centerpiece with Shimmer Effect) */}
+      {/* Countdown Timer Centerpiece */}
       <div className="frosted-neu max-w-3xl mx-auto p-8 sm:p-10 md:p-12 rounded-[2.5rem] relative overflow-hidden group transition-all duration-500 green-glow shimmer-sweep flex flex-col items-center">
 
-        {/* Subtle Ambient Background Highlight */}
+        {/* Ambient Background Highlight */}
         <div className="absolute -inset-1 bg-gradient-to-r from-[#FFA07A]/15 via-teal-300/20 to-[#FFA07A]/10 rounded-[2.5rem] blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center justify-center w-full">
 
           <PremiumCountdown targetDate={targetDate.getTime()} flipStyle="full" />
 
-          {/* Pill Badge Underneath: COUNTDOWN TO LAUNCH */}
+          {/* Pill Badge Underneath */}
           <div className="mt-12 inline-block">
             <span className="px-5 py-2 rounded-full bg-white/80 border border-white text-[#FFA07A] font-sans text-xs font-bold tracking-widest uppercase shadow-sm">
               COUNTDOWN TO LAUNCH
