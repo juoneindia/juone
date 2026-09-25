@@ -4,7 +4,7 @@ import PremiumCountdown from './PremiumCountdown';
 export const Hero: React.FC = () => {
   // Target date set to September 25th, 2026
   
-  const targetDate = new Date(2026, 10, 15, 0, 0, 0);
+  const targetDate = new Date(2026, 9, 15, 0, 0, 0);
 
   return (
     <section id="home" className="pt-12 pb-20 px-4 text-center max-w-5xl mx-auto relative z-10">
